@@ -6,7 +6,7 @@ function updateHTML(){
     if (data.currentTab===1)
     for (let i=0; i<cardsDisplay.length;i++){
         cardsDisplay[i].style.display = cardsData[i].unlocked?`inline`:`none`
-        cardsDisplay[i].innerHTML = cardsData[i].unlocked?`<br>${cardsData[i].rarity} ${cardsData[i].name}<br><br>${cardsData[i].desc}<br><br>Attacks:<br>${cardsData[i].attacks}`:`You shouldn't be able to see this.`
+        cardsDisplay[i].innerHTML = cardsData[i].unlocked?`<br>${cardsData[i].rarity} ${cardsData[i].name} [${cardsData[i].hp} HP]<br><br>${cardsData[i].desc}<br><br>Attacks:<br>${cardsData[i].attacks}`:`You shouldn't be able to see this.`
     }
 }
 const homeContainer = document.getElementById("homeContainer")
