@@ -16,8 +16,10 @@
     <button class="layer" id="deckNavButton" style="margin-left: 20px;margin-top: 20px;border: 3px gray solid; width: 70px;height: 50px;background-color: darkgray;"
             onclick="data.currentTab===0?switchTab(1):switchTab(0)">Deck</button>
     <div class="flexBox" id="deckContainer">
-        <div class="card" id="card0">Test</div>
-        <div class="card" id="card1">Test</div>
+        <div class="card" id="card0" onclick="viewingCard?stopViewingCard(0):viewCard(0)">Test</div>
+        <div class="card" id="card1" onclick="viewingCard?stopViewingCard(1):viewCard(1)">Test</div>
+        <div class="card" id="card2" onclick="viewingCard?stopViewingCard(2):viewCard(2)">Test</div>
+        <div class="card" id="card3" onclick="viewingCard?stopViewingCard(3):viewCard(3)">Test</div>
     </div>
     <div class="flexBox" id="homeContainer">
 
