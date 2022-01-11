@@ -13,9 +13,14 @@
 </head>
 <body>
 <div class="layer" id="topLayer" style="width: 99%;height: 99%;left: 0;right: 0;margin-left: auto;margin-right: auto;">
-    <div class="flexBox" id="cardContainer">
+    <button class="layer" id="deckNavButton" style="margin-left: 20px;margin-top: 20px;border: 3px gray solid; width: 70px;height: 50px;background-color: darkgray;"
+            onclick="data.currentTab===0?switchTab(1):switchTab(0)">Deck</button>
+    <div class="flexBox" id="deckContainer">
         <div class="card" id="card0">Test</div>
         <div class="card" id="card1">Test</div>
+    </div>
+    <div class="flexBox" id="homeContainer">
+
     </div>
 </div>
 </body>

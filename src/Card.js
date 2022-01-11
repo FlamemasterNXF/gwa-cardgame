@@ -1,5 +1,6 @@
 class Card {
-    constructor(name, desc, hp, attacks, rarity) {
+    constructor(unlocked, name, desc, hp, attacks, rarity) {
+        this.unlocked = unlocked
         this.name = name
         this.desc = desc
         this.hp = hp
@@ -8,5 +9,5 @@ class Card {
     }
 }
 let cardsData = []
-cardsData[0] = new Card(`gwa`, `your usual gwa`, 96, `trolled: destroy everything`, `Rare`)
-cardsData[1] = new Card(`gwa2`, `your unusual gwa`, 69, `SQUID GAMES!!!: un-destroy everything and force gwa to go to SQUID AGMES`, `Super Rare`)
+cardsData[0] = new Card(true,`gwa`, `your usual gwa`, 96, `trolled: destroy everything`, `PROTOTYPE`)
+cardsData[1] = new Card(false,`gwa2`, `your unusual gwa`, 69, `SQUID GAMES!!!: un-destroy everything and force gwa to go to SQUID AGMES`, `PROTOTYPE`)

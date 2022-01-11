@@ -1,6 +1,7 @@
 //create all the variables in a data object for saving
 function getDefaultObject() {
     return {
+        isPrototype: true,
         time: Date.now(),
         currentTab: 1,
     }
@@ -54,6 +55,8 @@ window.setInterval(function(){
 }, 10000);
 window.onload = function (){
     load()
+    switchTab(0)
+    if (data.isPrototype) window.alert(`Warning! Prototype Save Detected, Proceed with Caution!`)
 }
 //full reset
 function fullReset(){
