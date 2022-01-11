@@ -2,8 +2,7 @@ const cardsDisplay = []
 for (let i=0; i<cardsData.length; i++){
     cardsDisplay[i] = document.getElementById(`card${[i]}`)
 }
-
-let inCardView = false
+const rollButton = document.getElementById("rollButton")
 function updateHTML(){
     if (data.currentTab===1)
     for (let i=0; i<cardsDisplay.length;i++){

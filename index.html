@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <script defer src="src/Data.js"></script>
     <script defer src="src/Card.js"></script>
+    <script defer src="src/Lootbox.js"></script>
     <script defer src="src/Update.js"></script>
     <script defer src="src/Main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/miscStyles.css" />
@@ -20,9 +21,10 @@
         <div class="card" id="card1" onclick="viewingCard?stopViewingCard(1):viewCard(1)">Test</div>
         <div class="card" id="card2" onclick="viewingCard?stopViewingCard(2):viewCard(2)">Test</div>
         <div class="card" id="card3" onclick="viewingCard?stopViewingCard(3):viewCard(3)">Test</div>
+        <div class="card" id="card4" onclick="viewingCard?stopViewingCard(4):viewCard(4)">Test</div>
     </div>
     <div class="flexBox" id="homeContainer">
-
+        <button id="rollButton" onclick="roll()" style="margin-top: 50px; width: 200px;height: 100px;background-color: black;color: goldenrod;border: 3px gray solid">Click here to roll for a new card! [Prototype]</button>
     </div>
 </div>
 </body>
