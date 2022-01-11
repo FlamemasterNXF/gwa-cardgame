@@ -1,7 +1,7 @@
 .flexBox {
     display: flex;
     align-items: center;
-    place-content:center
+    place-content: center;
 }
 .generalTexts{
     color: white;
@@ -14,4 +14,13 @@
 }
 .layer{
     position: absolute;
+}
+.card{
+    margin-top: 10px;
+    width: 230px;
+    height: 300px;
+    border: 3px #2b2b2b solid;
+    color: white;
+    text-align: center;
+    font-family: DosisSemiBold;
 }
