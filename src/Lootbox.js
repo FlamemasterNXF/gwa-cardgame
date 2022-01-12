@@ -15,7 +15,7 @@ function roll(){
     let mythicalRoll = getRandom(1,101)
     let rareRoll = getRandom(1,101)
     let commonRoll = getRandom(1,101)
-    if (voidRoll === 1){chosenCard = cardsLocked[3][Math.floor(getRandom(0, cardsLocked[3].length))]}
+    if (voidRoll<=2){chosenCard = cardsLocked[3][Math.floor(getRandom(0, cardsLocked[3].length))]}
     else if (mythicalRoll<6){chosenCard = cardsLocked[2][Math.floor(getRandom(0, cardsLocked[2].length))]}
     else if (rareRoll<21){chosenCard = cardsLocked[1][Math.floor(getRandom(0, cardsLocked[1].length))]}
     else if (commonRoll<81){
