@@ -1,13 +1,13 @@
 const cardsDisplay = []
-for (let i=0; i<cardsData.length; i++){
+for (let i=0; i<data.cardsData.length; i++){
     cardsDisplay[i] = document.getElementById(`card${[i]}`)
 }
 const rollButton = document.getElementById("rollButton")
 function updateHTML(){
     if (data.currentTab===1)
     for (let i=0; i<cardsDisplay.length;i++){
-        cardsDisplay[i].style.display = cardsData[i].unlocked?`inline`:`none`
-        cardsDisplay[i].innerHTML = cardsData[i].unlocked?`<br>${cardsData[i].rarity} ${cardsData[i].name} [${cardsData[i].hp} HP]<br><br>${cardsData[i].desc}<br><br>${cardsData[i].smallDesc}<br>Click to learn more!`:`You shouldn't be able to see this.`
+        cardsDisplay[i].style.display = data.cardsData[i].unlocked?`inline`:`none`
+        cardsDisplay[i].innerHTML = data.cardsData[i].unlocked?`<br>${data.cardsData[i].rarity} ${data.cardsData[i].name} [${data.cardsData[i].hp} HP]<br><br>${data.cardsData[i].desc}<br><br>${data.cardsData[i].smallDesc}<br>Click to learn more!`:`You shouldn't be able to see this.`
     }
 }
 const homeContainer = document.getElementById("homeContainer")
@@ -27,7 +27,7 @@ function viewCard(x){
     }
     cardsDisplay[x].style.height = `500px`
     cardsDisplay[x].style.width = `550px`
-    cardsDisplay[x].innerHTML = `<br>${cardsData[x].rarity} ${cardsData[x].name} [${cardsData[x].hp} HP]<br><br>${cardsData[x].desc}<br><br>${cardsData[x].attacks}<br><br><br>Click again to go back.`
+    cardsDisplay[x].innerHTML = `<br>${data.cardsData[x].rarity} ${data.cardsData[x].name} [${data.cardsData[x].hp} HP]<br><br>${data.cardsData[x].desc}<br><br>${data.cardsData[x].attacks}<br><br><br>Click again to go back.`
     cardsDisplay[x].style.display = `inline`
     data.currentTab = -1
     deckNavButton.style.display = `none`

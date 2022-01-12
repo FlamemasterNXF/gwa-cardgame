@@ -4,10 +4,10 @@ function getRandom(min, max) {
 let cardsLocked = [0, 0, 0, 0]
 let chosenCard
 function getLockedCards(){
-    cardsLocked[0] = cardsData.filter(card => card.rWeight === 80 && !card.unlocked)
-    cardsLocked[1] = cardsData.filter(card => card.rWeight === 20 && !card.unlocked)
-    cardsLocked[2] = cardsData.filter(card => card.rWeight === 5 && !card.unlocked)
-    cardsLocked[3] = cardsData.filter(card => card.rWeight === 1 && !card.unlocked)
+    cardsLocked[0] = data.cardsData.filter(card => card.rWeight === 80 && !card.unlocked)
+    cardsLocked[1] = data.cardsData.filter(card => card.rWeight === 20 && !card.unlocked)
+    cardsLocked[2] = data.cardsData.filter(card => card.rWeight === 5 && !card.unlocked)
+    cardsLocked[3] = data.cardsData.filter(card => card.rWeight === 1 && !card.unlocked)
 }
 function roll(){
     getLockedCards()
@@ -15,10 +15,12 @@ function roll(){
     let mythicalRoll = getRandom(1,101)
     let rareRoll = getRandom(1,101)
     let commonRoll = getRandom(1,101)
-    if (voidRoll === 1){chosenCard = cardsLocked[3][getRandom(0, cardsLocked[3].length)-1]}
-    else if (mythicalRoll<6){chosenCard = cardsLocked[2][getRandom(0, cardsLocked[2].length-1)]}
-    else if (rareRoll<21){chosenCard = cardsLocked[1][getRandom(0, cardsLocked[1].length-1)]}
-    else if (commonRoll<81){chosenCard = cardsLocked[0][getRandom(0, cardsLocked[0].length-1)]}
+    if (voidRoll === 1){chosenCard = cardsLocked[3][Math.floor(getRandom(0, cardsLocked[3].length))]}
+    else if (mythicalRoll<6){chosenCard = cardsLocked[2][Math.floor(getRandom(0, cardsLocked[2].length))]}
+    else if (rareRoll<21){chosenCard = cardsLocked[1][Math.floor(getRandom(0, cardsLocked[1].length))]}
+    else if (commonRoll<81){
+        chosenCard = cardsLocked[0][Math.floor(getRandom(0, cardsLocked[0].length))]
+    }
     else chosenCard = 0
 
     if (voidRoll === 1 && cardsLocked[3].length === 0) rollButton.innerText = `You rolled a VOID card, but you've unlocked them all!`

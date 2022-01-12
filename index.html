@@ -3,28 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <script defer src="src/Data.js"></script>
-    <script defer src="src/Card.js"></script>
+    <script defer src="src/Cards.js"></script>
     <script defer src="src/Lootbox.js"></script>
     <script defer src="src/Update.js"></script>
     <script defer src="src/Main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/miscStyles.css" />
     <link rel="stylesheet" type="text/css" href="css/classStyles.css" />
     <link rel="icon" href="favicon.png" type="image/x-icon" sizes="16x16">
-    <title>Title</title>
+    <title>gwacards</title>
 </head>
 <body>
 <div class="layer" id="topLayer" style="width: 99%;height: 99%;left: 0;right: 0;margin-left: auto;margin-right: auto;">
     <button class="layer" id="deckNavButton" style="margin-left: 20px;margin-top: 20px;border: 3px gray solid; width: 70px;height: 50px;background-color: darkgray;"
             onclick="data.currentTab===0?switchTab(1):switchTab(0)">Deck</button>
-    <div class="flexBox" id="deckContainer">
-        <div class="card" id="card0" onclick="viewingCard?stopViewingCard(0):viewCard(0)">Test</div>
-        <div class="card" id="card1" onclick="viewingCard?stopViewingCard(1):viewCard(1)">Test</div>
-        <div class="card" id="card2" onclick="viewingCard?stopViewingCard(2):viewCard(2)">Test</div>
-        <div class="card" id="card3" onclick="viewingCard?stopViewingCard(3):viewCard(3)">Test</div>
-        <div class="card" id="card4" onclick="viewingCard?stopViewingCard(4):viewCard(4)">Test</div>
+    <div class="flexBox" id="deckContainer" style="flex-direction: column">
+        <div class="flexBox cardRow">
+            <div class="card" id="card0" onclick="viewingCard?stopViewingCard(0):viewCard(0)">Test</div>
+            <div class="card" id="card1" onclick="viewingCard?stopViewingCard(1):viewCard(1)">Test</div>
+            <div class="card" id="card2" onclick="viewingCard?stopViewingCard(2):viewCard(2)">Test</div>
+            <div class="card" id="card3" onclick="viewingCard?stopViewingCard(3):viewCard(3)">Test</div>
+            <div class="card" id="card4" onclick="viewingCard?stopViewingCard(4):viewCard(4)">Test</div>
+            <div class="card" id="card5" onclick="viewingCard?stopViewingCard(5):viewCard(5)">Test</div>
+            <div class="card" id="card6" onclick="viewingCard?stopViewingCard(6):viewCard(6)">Test</div>
+        </div>
+        <div class="flexBox cardRow">
+            <div class="card" id="card7" onclick="viewingCard?stopViewingCard(7):viewCard(7)">Test</div>
+            <div class="card" id="card8" onclick="viewingCard?stopViewingCard(8):viewCard(8)">Test</div>
+            <div class="card" id="card9" onclick="viewingCard?stopViewingCard(9):viewCard(9)">Test</div>
+            <div class="card" id="card10" onclick="viewingCard?stopViewingCard(10):viewCard(10)">Test</div>
+            <div class="card" id="card11" onclick="viewingCard?stopViewingCard(11):viewCard(11)">Test</div>
+            <div class="card" id="card12" onclick="viewingCard?stopViewingCard(12):viewCard(12)">Test</div>
+            <div class="card" id="card13" onclick="viewingCard?stopViewingCard(13):viewCard(13)">Test</div>
+        </div>
     </div>
     <div class="flexBox" id="homeContainer">
-        <button id="rollButton" onclick="roll()" style="margin-top: 50px; width: 200px;height: 100px;background-color: black;color: goldenrod;border: 3px gray solid">Click here to roll for a new card! [Prototype]</button>
+        <button class="typeWriter" id="rollButton" onclick="roll()" style="margin-top: 50px; width: 200px;height: 100px;background-color: black;color: goldenrod;border: 3px gray solid">Click here to roll for a new card!</button>
+        <button id="unlockALl" onclick="unlockAll()">unlock everything</button>
+        <button id="fullReset" onclick="fullReset()">full reset</button>
     </div>
 </div>
 </body>

@@ -15,6 +15,9 @@
 .layer{
     position: absolute;
 }
+.cardRow{
+    flex-direction: row;
+}
 .card{
     margin-top: 10px;
     width: 250px;

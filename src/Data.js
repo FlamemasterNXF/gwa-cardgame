@@ -1,6 +1,8 @@
 //create all the variables in a data object for saving
 function getDefaultObject() {
     return {
+        isPrototype: true,
+        cardsData: [],
         time: Date.now(),
         currentTab: 1,
     }
@@ -55,6 +57,7 @@ window.setInterval(function(){
 window.onload = function (){
     load()
     switchTab(0)
+    if (data.isPrototype) alert("Warning! Prototype Save!")
 }
 //full reset
 function fullReset(){
